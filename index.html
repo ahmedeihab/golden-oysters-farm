@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>أسماك المحار الذهبية – مزرعة البلطي المتطورة</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- الهيدر -->
   <header class="header">
-    <div class="header__content">
+    <div class="header__content container">
       <h1 class="header__logo">🐟 أسماك المحار الذهبية</h1>
-      <button class="nav-toggle" aria-label="قائمة التنقل">&#9776;</button>
-      <nav class="header__nav" aria-label="القائمة الرئيسية">
-        <ul class="nav__list">
+      <button class="header__toggle" aria-label="قائمة"><span></span><span></span><span></span></button>
+      <nav class="header__nav">
+        <ul>
           <li><a href="#hero">الرئيسية</a></li>
           <li><a href="#about">عن المزرعة</a></li>
-          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#gallery">معرض الصور</a></li>
           <li><a href="#contact">تواصل معنا</a></li>
         </ul>
       </nav>
@@ -26,120 +26,49 @@
 
   <!-- قسم الهيرو -->
   <section id="hero" class="hero">
-    <div class="hero__background"></div>
-    <div class="hero__content">
-      <h2 class="hero__title">مزرعة البلطي بنظام RAS المتطور</h2>
-      <p class="hero__subtitle">150 حوض – شري، القصيم</p>
-      <div class="hero__stats">
-        <div class="stat">
-          <div class="stat__number">150</div>
-          <div class="stat__label">حوض مستهدف</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">RAS</div>
-          <div class="stat__label">نظام مغلق</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">2025</div>
-          <div class="stat__label">سنة التأسيس</div>
-        </div>
-      </div>
-      <a href="#contact" class="hero__cta">تواصل الآن</a>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <h2>مزرعة البلطي بنظام RAS المتطور</h2>
+      <p>150 حوض • شري، القصيم</p>
+      <a href="#contact" class="btn">تواصل الآن</a>
     </div>
   </section>
 
   <!-- قسم عن المزرعة -->
-  <section id="about" class="section about">
-    <h2 class="section__title">عن مزرعتنا</h2>
-    <p class="about__text">
-      مزرعة مكثفة بنظام إعادة التدوير المائي (RAS) لإنتاج أسماك البلطي عالية الجودة، 
-      مع تحكم كامل في جودة المياه وتوفير 95% من المياه، وإنتاج مستدام طوال العام.
+  <section id="about" class="section">
+    <h2>عن المزرعة</h2>
+    <p>
+      نظام إعادة التدوير المائي (RAS) يوفر 95% من المياه، ويضمن إنتاجًا مستدامًا
+      بجودة عالية طوال العام.
     </p>
-    <div class="about__features">
-      <div class="feature">
-        <div class="feature__icon">💧</div>
-        <h3>توفير 95% مياه</h3>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">⚙️</div>
-        <h3>تحكم ذكي</h3>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">🔄</div>
-        <h3>إنتاج مستدام</h3>
-      </div>
-    </div>
   </section>
 
-  <!-- قسم الخدمات -->
-  <section id="services" class="section services">
-    <h2 class="section__title">خدماتنا</h2>
-    <div class="services__grid">
-      <div class="service__card">
-        <div class="service__icon">🏗️</div>
-        <h3>مرحلة الإنشاء</h3>
-        <p>تقدم 35% في البنية التحتية.</p>
-      </div>
-      <div class="service__card">
-        <div class="service__icon">🌊</div>
-        <h3>نظام RAS</h3>
-        <p>تحكم كامل في درجة الحرارة وجودة المياه.</p>
-      </div>
-      <div class="service__card">
-        <div class="service__icon">📍</div>
-        <h3>الموقع الاستراتيجي</h3>
-        <p>شري، القصيم – قرب الأسواق والخدمات.</p>
-      </div>
+  <!-- معرض الصور -->
+  <section id="gallery" class="section gallery">
+    <h2>معرض الصور</h2>
+    <div class="gallery__grid">
+      <div class="gallery__item"><img src="https://source.unsplash.com/400x400/?fish-farm" alt="مزرعة أسماك" loading="lazy"></div>
+      <div class="gallery__item"><img src="https://source.unsplash.com/400x400/?aquaculture" alt="نظام RAS" loading="lazy"></div>
+      <div class="gallery__item"><img src="https://source.unsplash.com/400x400/?tilapia" alt="أسماك بلطي" loading="lazy"></div>
+      <div class="gallery__item"><img src="https://source.unsplash.com/400x400/?fish-tank" alt="أحواض" loading="lazy"></div>
     </div>
   </section>
 
   <!-- قسم التواصل -->
   <section id="contact" class="section contact">
-    <h2 class="section__title">تواصل معنا</h2>
-    <div class="contact__content">
-      <div class="contact__numbers">
-        <div class="contact__number">
-          <span class="contact__name">م. أحمد إيهاب</span>
-          <a class="contact__phone" href="https://wa.me/+966567455791" aria-label="دردشة واتساب مع م. أحمد إيهاب">+966 5674 55791</a>
-        </div>
-        <div class="contact__number">
-          <span class="contact__name">م. عبدالله علي</span>
-          <a class="contact__phone" href="https://wa.me/+966568845860" aria-label="دردشة واتساب مع م. عبدالله علي">+966 5688 45860</a>
-        </div>
-      </div>
-      <div class="contact__address">
-        <h3>الموقع</h3>
-        <p>شري، القصيم، المملكة العربية السعودية</p>
-      </div>
+    <h2>تواصل معنا</h2>
+    <div class="contact__cards">
+      <a href="https://wa.me/+966567455791" class="contact__card" aria-label="واتساب مهندس أحمد إيهاب">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="واتساب">
+        <span>م. أحمد إيهاب</span>
+      </a>
+      <a href="https://wa.me/+966568845860" class="contact__card" aria-label="واتساب مهندس عبدالله علي">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="واتساب">
+        <span>م. عبدالله علي</span>
+      </a>
     </div>
   </section>
 
-  <!-- أزرار واتساب عائمة -->
-  <a id="btn-ahmed" class="whatsapp-btn" href="https://wa.me/+966567455791" aria-label="واتساب م. أحمد إيهاب">
-    <svg class="whatsapp-icon" viewBox="0 0 32 32"><path d="M16.019 2.313c-7.291 ..."/></svg>
-  </a>
-  <a id="btn-abdullah" class="whatsapp-btn" href="https://wa.me/+966568845860" aria-label="واتساب م. عبدالله علي">
-    <svg class="whatsapp-icon" viewBox="0 0 32 32"><path d="M16.019 2.313c-7.291 ..."/></svg>
-  </a>
-
-  <script>
-    // تفعيل قائمة الهمبرغر للشاشات الصغيرة
-    document.querySelector('.nav-toggle').onclick = () => {
-      document.querySelector('.header__nav').classList.toggle('open');
-    };
-    // عدادات الأرقام
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.stat__number').forEach(el => {
-        const target = +el.textContent, step = target/50;
-        let count = 0;
-        const timer = setInterval(() => {
-          count += step;
-          if (count >= target) { clearInterval(timer); el.textContent = target; }
-          else el.textContent = Math.floor(count);
-        }, 30);
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
