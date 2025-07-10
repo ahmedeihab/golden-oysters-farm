@@ -1,0 +1,99 @@
+/* ========== المتغيرات ========= */
+:root {
+  --color-bg: #FCFCF9;
+  --color-primary: #20808D;
+  --color-primary-light: #06B6D4;
+  --color-text: #13343B;
+  --radius: 12px;
+  --space: 16px;
+  --font-base: 'Tajawal', sans-serif;
+}
+
+/* ========== قاعدة ======== */
+*,
+*::before,
+*::after {
+  margin: 0; padding: 0; box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ========== الهيدر ========= */
+.header {
+  position: fixed; top: 0; width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(8,145,178,0.2);
+  z-index: 1000;
+}
+.header__content {
+  max-width: 1200px; margin: auto;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: var(--space);
+}
+.header__logo { background: var(--color-primary) linear-gradient(135deg,#06B6D4,#059669); -webkit-background-clip: text; color: transparent; font-size: 1.5rem; }
+.nav__list { list-style: none; display: flex; gap: var(--space); }
+.nav__list a { text-decoration: none; color: var(--color-text); font-weight: 500; position: relative; }
+.nav__list a::after { content: ''; position: absolute; bottom: -4px; width: 0; height: 2px; background: var(--color-primary); transition: width .25s; }
+.nav__list a:hover::after { width: 100%; }
+
+/* ========== الهيرو ========= */
+.hero {
+  height: 100vh; display: flex; align-items: center; justify-content: center;
+  text-align: center; position: relative; overflow: hidden;
+}
+.hero__background {
+  position: absolute; inset: 0; background: var(--color-primary-light); opacity: .8; z-index: -1;
+}
+.hero__title { font-size: clamp(2rem,5vw,3rem); margin-bottom: var(--space); color: #fff; }
+.hero__subtitle { font-size: 1.2rem; margin-bottom: var(--space); color: #fff; opacity: .9; }
+.hero__stats { display: flex; gap: var(--space); justify-content: center; margin-bottom: var(--space); flex-wrap: wrap; }
+.hero__cta { display: inline-block; padding: var(--space) calc(var(--space)*2); background: rgba(255,255,255,0.2); color: #fff; border: 2px solid rgba(255,255,255,0.3); border-radius: var(--radius); transition: transform .25s; }
+.hero__cta:hover { transform: translateY(-2px); }
+
+/* ========== البطاقات ========= */
+.stat, .feature, .service__card { 
+  background: rgba(255,255,255,0.1); border-radius: var(--radius);
+  backdrop-filter: blur(10px); padding: var(--space);
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: center; transition: transform .25s;
+}
+.stat__number { font-size: 1.5rem; font-weight: bold; margin-bottom: .5rem; color: #fff; }
+.stat__label { font-size: .9rem; color: #fff; opacity: .9; }
+.feature__icon, .service__icon { font-size: 2rem; margin-bottom: .75rem; color: var(--color-primary); }
+.feature:hover, .service__card:hover { transform: translateY(-4px); }
+
+/* ========== الأقسام ========= */
+.section { padding: calc(var(--space)*2) 0; max-width: 1200px; margin: auto; }
+.section__title { text-align: center; font-size: 2rem; margin-bottom: var(--space); background: var(--color-primary-light); -webkit-background-clip: text; color: transparent; }
+
+/* ========== التواصل ========= */
+.contact__number { display: flex; gap: .5rem; align-items: center; margin-bottom: var(--space); }
+.contact__phone { color: #059669; font-weight: bold; text-decoration: none; }
+
+/* ========== واتساب ========= */
+.whatsapp-btn {
+  position: fixed; width: 50px; height: 50px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); animation: pulse 2s infinite; z-index: 999;
+}
+#btn-ahmed { bottom: 100px; right: 20px; background: #25D366; }
+#btn-abdullah { bottom: 30px; right: 20px; background: #128C7E; }
+.whatsapp-icon { width: 24px; height: 24px; fill: #fff; }
+@keyframes pulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.1)} }
+
+/* ========== تجاوب ========= */
+@media (max-width: 768px) {
+  .nav__list { display: none; }
+  .hero__stats { flex-direction: column; }
+  .contact__content { grid-template-columns: 1fr; }
+}

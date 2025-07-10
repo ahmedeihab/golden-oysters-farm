@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أسماك المحار الذهبية - مزرعة البلطي المتطورة</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header__content">
+      <h2 class="header__logo">🐟 أسماك المحار الذهبية</h2>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li><a href="#about">عن المزرعة</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+      <button class="language-toggle" data-ar>عربي</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__background"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">مزرعة البلطي بنظام RAS</h1>
+      <p class="hero__subtitle">150 حوض – شري، القصيم</p>
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__number">150</div>
+          <div class="stat__label">حوض مستهدف</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">RAS</div>
+          <div class="stat__label">نظام مغلق</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">2025</div>
+          <div class="stat__label">سنة التأسيس</div>
+        </div>
+      </div>
+      <a href="#contact" class="hero__cta">تواصل الآن</a>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <h2 class="section__title">عن المزرعة</h2>
+    <div class="about__content">
+      <p class="about__text">
+        مزرعة استزراع سمكي مكثف بنظام RAS مغلق لإنتاج أسماك البلطي عالية الجودة 
+        مع تحكم كامل في المياه وإنتاج مستدام على مدار السنة.
+      </p>
+      <div class="about__features">
+        <div class="feature">
+          <div class="feature__icon">💧</div>
+          <h3>توفير 95% مياه</h3>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">📈</div>
+          <h3>كثافة عالية للأسماك</h3>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🔄</div>
+          <h3>إنتاج مستدام</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <h2 class="section__title">خدماتنا</h2>
+    <div class="services__grid">
+      <div class="service__card">
+        <div class="service__icon">🏗️</div>
+        <h3>مرحلة الإنشاء</h3>
+        <p>تقدم 35% في البنية التحتية ونظم الضخ والمعالجة.</p>
+      </div>
+      <div class="service__card">
+        <div class="service__icon">🌊</div>
+        <h3>نظام RAS المتطور</h3>
+        <p>تحكم ذكي في درجة حرارة وجودة المياه.</p>
+      </div>
+      <div class="service__card">
+        <div class="service__icon">📍</div>
+        <h3>الموقع الاستراتيجي</h3>
+        <p>شري – القصيم، قرب الأسواق والمرافق اللوجيستية.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2 class="section__title">تواصل معنا</h2>
+    <div class="contact__content">
+      <div class="contact__numbers">
+        <div class="contact__number">
+          <span class="contact__name">م. أحمد إيهاب</span>
+          <a class="contact__phone" href="https://wa.me/+966567455791">+966 5674 55791</a>
+        </div>
+        <div class="contact__number">
+          <span class="contact__name">م. عبدالله علي</span>
+          <a class="contact__phone" href="https://wa.me/+966568845860">+966 5688 45860</a>
+        </div>
+      </div>
+      <div class="contact__address">
+        <h4>الموقع</h4>
+        <p>شري، منطقة القصيم، المملكة العربية السعودية</p>
+      </div>
+    </div>
+  </section>
+
+  <a id="btn-ahmed" class="whatsapp-btn" href="https://wa.me/+966567455791" target="_blank" data-name="م. أحمد إيهاب">
+    <svg class="whatsapp-icon" viewBox="0 0 32 32"><path d="M16.019..."/></svg>
+  </a>
+  <a id="btn-abdullah" class="whatsapp-btn" href="https://wa.me/+966568845860" target="_blank" data-name="م. عبدالله علي">
+    <svg class="whatsapp-icon" viewBox="0 0 32 32"><path d="M16.019..."/></svg>
+  </a>
+
+  <script>
+    document.querySelectorAll('.progress-fill').forEach(bar=>{
+      const w = bar.style.width; bar.style.width = '0%';
+      setTimeout(()=> bar.style.width = w, 500);
+    });
+    window.addEventListener('load',()=>{
+      const nums = document.querySelectorAll('.stat__number');
+      nums.forEach(el=>{
+        let target = +el.textContent, count = 0, step = target/50;
+        const interval = setInterval(()=>{
+          count += step;
+          if(count >= target){ clearInterval(interval); count = target; }
+          el.textContent = Math.floor(count);
+        }, 30);
+      });
+    });
+  </script>
+</body>
+</html>
